@@ -2,7 +2,27 @@
 Добавляем новый блок в компоненте bitrix sale.order.ajax. Не трогаем битриксовый JS, ставим модулем. Если что - легко вырезать
 [![](https://raw.githubusercontent.com/MashinaMashina/bitrix_order_newblock/master/README_IMG/result.png)](https://raw.githubusercontent.com/MashinaMashina/bitrix_order_newblock/master/README_IMG/result.png)
 ## Установка
-В файле template.php блок:
+Загрузить файл order_ajax_ext.js в папку с шаблоном компонента
+
+------------
+
+
+В файле template.php блок (может быть тут */bitrix/templates/%Шаблон%/components/bitrix/sale.order.ajax/modif/template.php*):
+Подключить JS:
+```php
+$this->addExternalJs($templateFolder.'/order_ajax_ext.js');
+```
+
+------------
+
+
+После блока:
+```html
+<div id="bx-soa-properties" data-visited="false" class="bx-soa-section bx-active">
+	<!-- code -->
+</div>
+```
+Вставить:
 ```html
 <!-- BUYER PHONE BLOCK	-->
 <div id="bx-soa-phone" data-visited="false" class="bx-soa-section bx-active">
@@ -13,12 +33,6 @@
 		<div class="col-xs-12 col-sm-3 text-right"><a href="" class="bx-soa-editstep">Изменить</a></div>
 	</div>
 	<div class="bx-soa-section-content container-fluid"></div>
-</div>
-```
-Поставить после блока
-```html
-<div id="bx-soa-properties" data-visited="false" class="bx-soa-section bx-active">
-	<!-- code -->
 </div>
 ```
 
@@ -36,6 +50,9 @@
 	<div class="bx-soa-section-content container-fluid"></div>
 </div>
 ```
+
+------------
+
 
 После блока
 ```html
@@ -63,13 +80,25 @@
 	</div>
 </div>
 ```
+
+------------
+
+
 Как примерно оно должно выглядеть:
 [changes.png](https://github.com/MashinaMashina/bitrix_order_newblock/blob/master/README_IMG/changes.png "changes.png"), [changes_2.png](https://github.com/MashinaMashina/bitrix_order_newblock/blob/master/README_IMG/changes_2.png "changes_2.png")
+
+
+------------
+
 
 Заменить все вызовы
 *BX.Sale.OrderAjaxComponent*
 На
 *BX.Sale.OrderAjaxComponentExt*
+
+
+------------
+
 
 Должно работать. :D
 
