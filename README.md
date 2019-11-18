@@ -1,5 +1,5 @@
-# bitrix_order_newblock
-Добавление нового поля в компонент bitrix:sale.order.ajax
+# Добавление нового поля в компонент bitrix:sale.order.ajax
+Добавляем новый блок в компоненте bitrix sale.order.ajax. Не трогаем битриксовый JS, ставим модулем. Если что - легко вырезать
 [![](https://raw.githubusercontent.com/MashinaMashina/bitrix_order_newblock/master/README_IMG/result.png)](https://raw.githubusercontent.com/MashinaMashina/bitrix_order_newblock/master/README_IMG/result.png)
 ## Установка
 В файле template.php блок:
