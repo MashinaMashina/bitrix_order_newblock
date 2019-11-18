@@ -1,6 +1,6 @@
 # bitrix_order_newblock
 Добавление нового поля в компонент bitrix:sale.order.ajax
-
+[![](https://raw.githubusercontent.com/MashinaMashina/bitrix_order_newblock/master/README_IMG/result.png)](https://raw.githubusercontent.com/MashinaMashina/bitrix_order_newblock/master/README_IMG/result.png)
 ## Установка
 В файле template.php блок:
 ```html
@@ -63,6 +63,8 @@
 	</div>
 </div>
 ```
+Как примерно оно должно выглядеть:
+[changes.png](https://github.com/MashinaMashina/bitrix_order_newblock/blob/master/README_IMG/changes.png "changes.png"), [changes_2.png](https://github.com/MashinaMashina/bitrix_order_newblock/blob/master/README_IMG/changes_2.png "changes_2.png")
 
 Заменить все вызовы
 *BX.Sale.OrderAjaxComponent*
